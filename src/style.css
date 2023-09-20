@@ -8,8 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-.invite {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+body {
+  background-color: #faf0e6;
 }

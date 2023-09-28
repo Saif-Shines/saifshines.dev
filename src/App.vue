@@ -31,6 +31,10 @@ h1 {
   font-family: "Nanum Gothic Coding", cursive;
   font-size: 5rem;
   color: #352f44;
+
+  @media (min-width: 300px) {
+    font-size: 3rem;
+  }
 }
 
 p {
@@ -39,6 +43,9 @@ p {
   font-size: 1.3rem;
   width: 65%;
   color: #5c5470;
+  @media (min-width: 300px) {
+    display: none;
+  }
 }
 
 div .main {

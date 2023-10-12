@@ -22,10 +22,16 @@ export default {};
   </div>
 </template>
 
-<style>
+<style scoped>
+@font-face {
+  font-family: "Urbanist";
+  src: url("../assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf");
+}
+
 p {
-  font-family: auto;
+  font-family: Urbanist;
   font-weight: 50;
+  letter-spacing: 0.05em;
   font-size: 1.3rem;
   width: 65%;
   color: #5c5470;

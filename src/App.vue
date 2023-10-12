@@ -14,6 +14,7 @@ export default {
   <div class="main">
     <div class="intro">
       <h1>Saif Ali Shaik</h1>
+
       <Intro />
       <SocialLinks />
     </div>

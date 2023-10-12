@@ -7,6 +7,10 @@ const state = reactive({
     { label: "GitHub", url: "https://github.com/Saif-Shines/" },
     { label: "Blog", url: "https://world.hey.com/saif.shines" },
     { label: "Email", url: "mailto:saif.shines@hey.com" },
+    {
+      label: "Learning Progress",
+      url: "https://frontendmasters.com/u/Saif_Shines/",
+    },
   ],
 });
 </script>

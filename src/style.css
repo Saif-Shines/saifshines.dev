@@ -8,6 +8,22 @@ html {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: "Urbanist";
+  src: url("../src/assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "BadScript";
+  src: url("../src/assets/fonts/Bad_Script/BadScript-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ExplainMono";
+  src: url("../src/assets/fonts/Code/Explain-Mono.ttf");
+}
+
 body {
   background-color: #faf0e6;
+  font-family: Urbanist;
 }

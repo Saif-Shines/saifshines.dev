@@ -1,16 +1,49 @@
-<script></script>
+<script>
+import { PrismEditor } from "vue-prism-editor";
+import "vue-prism-editor/dist/prismeditor.min.css";
+
+import { highlight, languages } from "prismjs/components/prism-core";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-javascript";
+import "prismjs/themes/prism-tomorrow.css"; // import syntax highlighting styles
+
+export default {
+  components: {
+    PrismEditor,
+  },
+  data: () => ({ code: "/*Use this space to explain by writing*/" }),
+  methods: {
+    highlighter(code) {
+      return highlight(code, languages.js); // languages.<insert language> to return html with markup
+    },
+  },
+};
+</script>
 
 <template>
-  <h1>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nihil dolorum
-    minus expedita accusantium inventore consequatur saepe excepturi possimus,
-    dignissimos voluptates dicta beatae tenetur veritatis deserunt architecto
-    consequuntur non! Alias.
-  </h1>
+  <prism-editor
+    class="my-editor"
+    v-model="code"
+    :highlight="highlighter"
+    line-numbers
+  ></prism-editor>
 </template>
 
 <style scoped>
-h1 {
-  background-color: aliceblue;
+/* required class */
+.my-editor {
+  background: #2d2d2d;
+  color: #ccc;
+  font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 15px;
+  height: 50rem;
+  width: 50rem;
+}
+
+/* optional class for removing the outline */
+.prism-editor__textarea:focus {
+  outline: none;
 }
 </style>

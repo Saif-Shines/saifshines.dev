@@ -11,7 +11,7 @@ export default {
   components: {
     PrismEditor,
   },
-  data: () => ({ code: "/*Use this space to explain by writing*/" }),
+  data: () => ({ code: "/*Use this space to explain by writing*/ \n\n\n\n\n" }),
   methods: {
     highlighter(code) {
       return highlight(code, languages.js); // languages.<insert language> to return html with markup
@@ -34,8 +34,8 @@ export default {
 .my-editor {
   background: #2d2d2d;
   color: #ccc;
-  font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
-  font-size: 14px;
+  font-family: ExplainMono;
+  font-size: 1rem;
   line-height: 1.5;
   padding: 15px;
   height: 50rem;

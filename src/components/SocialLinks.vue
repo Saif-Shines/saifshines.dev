@@ -3,13 +3,13 @@ import { reactive } from "vue";
 
 const state = reactive({
   links: [
+    { label: "Journal", url: "https://world.hey.com/saif.shines" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/saif-shines/" },
     { label: "GitHub", url: "https://github.com/Saif-Shines/" },
-    { label: "Journal", url: "https://world.hey.com/saif.shines" },
     { label: "Email", url: "mailto:saif.shines@hey.com" },
     { label: "Blog", url: "https://saifshines.medium.com/" },
     {
-      label: "Learning Progress",
+      label: "Skills",
       url: "https://frontendmasters.com/u/Saif_Shines/",
     },
   ],

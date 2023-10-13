@@ -26,16 +26,8 @@ export default { components: { SocialLinks } };
   </div>
 </template>
 
-<style scoped>
-@font-face {
-  font-family: "Urbanist";
-  src: url("../assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf");
-}
+<style>
 
-@font-face {
-  font-family: "BadScript";
-  src: url("../assets/fonts/Bad_Script/BadScript-Regular.ttf");
-}
 
 h1 {
   font-family: "BadScript";

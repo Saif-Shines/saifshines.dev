@@ -7,6 +7,7 @@ export default {
   components: {
     Intro,
     SocialLinks,
+    Explainer,
   },
 };
 </script>
@@ -14,9 +15,12 @@ export default {
 <template>
   <div class="main">
     <div class="intro">
-      <router-link to="/"> </router-link>
-      <router-link to="/explain"></router-link>
       <router-view />
+    </div>
+    <div class="tools">
+      <router-link to="/">Home</router-link>
+      <br />
+      <router-link to="/explain">Explain</router-link>
     </div>
   </div>
 </template>
@@ -33,6 +37,12 @@ div .main {
 
 .intro {
   grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  place-self: center;
+}
+
+.tools {
+  grid-column: 4 / 5;
   grid-row: 1 / 3;
   place-self: center;
 }

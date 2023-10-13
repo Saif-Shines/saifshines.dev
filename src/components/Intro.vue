@@ -1,19 +1,12 @@
 <script>
-<<<<<<< HEAD
-export default {};
-=======
 import SocialLinks from "./SocialLinks.vue";
 
 export default { components: { SocialLinks } };
->>>>>>> dev
 </script>
 
 <template>
   <div>
-<<<<<<< HEAD
-=======
     <h1>Saif Ali Shaik</h1>
->>>>>>> dev
     <p>
       Working closely with developers as end users for years, I have developed a
       clear understanding of their needs and possess the ability to collaborate

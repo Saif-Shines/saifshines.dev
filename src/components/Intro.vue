@@ -1,9 +1,12 @@
 <script>
-export default {};
+import SocialLinks from "./SocialLinks.vue";
+
+export default { components: { SocialLinks } };
 </script>
 
 <template>
   <div>
+    <h1>Saif Ali Shaik</h1>
     <p>
       Working closely with developers as end users for years, I have developed a
       clear understanding of their needs and possess the ability to collaborate
@@ -19,6 +22,7 @@ export default {};
       create products that meet and exceed user expectations, ultimately making
       their lives easier.
     </p>
+    <SocialLinks />
   </div>
 </template>
 
@@ -28,12 +32,23 @@ export default {};
   src: url("../assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf");
 }
 
+@font-face {
+  font-family: "BadScript";
+  src: url("../assets/fonts/Bad_Script/BadScript-Regular.ttf");
+}
+
+h1 {
+  font-family: "BadScript";
+  font-size: 5rem;
+  color: #352f44;
+}
+
 p {
   font-family: Urbanist;
   font-weight: 50;
   letter-spacing: 0.05em;
   font-size: 1.3rem;
-  width: 65%;
+  width: 85%;
   color: #5c5470;
 }
 </style>

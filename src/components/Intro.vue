@@ -1,5 +1,14 @@
-<script>
+<script async>
 import SocialLinks from "./SocialLinks.vue";
+import squid from "../utils/squid";
+
+try {
+  const portfolioCollection = squid.collection("portfolio");
+  const name = await portfolioCollection.query().snapshot();
+  console.table(name);
+} catch (error) {
+  console.error("problem accessing db", error);
+}
 
 export default { components: { SocialLinks } };
 </script>
@@ -27,8 +36,6 @@ export default { components: { SocialLinks } };
 </template>
 
 <style>
-
-
 h1 {
   font-family: "BadScript";
   font-size: 5rem;

@@ -5,11 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "bunx --bun vite",
+    "start": "concurrently \"bun run start:backend\" \"bun run start:frontend\"",
+    "start:frontend": "cd /Users/saifas/saifshines.dev && bun run dev",
+    "start:backend": "cd /Users/saifas/saifshines.dev/saifshines-dev-backend && bun start-squid",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@squidcloud/client": "^1.0.127",
+    "concurrently": "^8.2.1",
     "prismjs": "^1.29.0",
+    "rxjs": "^7.8.1",
     "vue": "^3.3.4",
     "vue-prism-editor": "alpha",
     "vue-router": "^4.2.5"

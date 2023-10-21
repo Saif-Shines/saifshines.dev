@@ -12,6 +12,10 @@ const state = reactive({
       label: "Skills",
       url: "https://frontendmasters.com/u/Saif_Shines/",
     },
+    {
+      label: "Mastodon",
+      url: "https://mastodon.world/@saif_shines",
+    },
   ],
 });
 </script>

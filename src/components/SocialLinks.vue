@@ -25,6 +25,12 @@ const state = reactive({
     <li v-for="link in state.links" :key="link.label">
       <a :href="link.url">{{ link.label }}</a>
     </li>
+    <li>
+      <router-link class="nav" to="/">Home</router-link>
+    </li>
+    <li>
+      <router-link class="nav" to="/explain">Explain</router-link>
+    </li>
   </ul>
 </template>
 
@@ -36,9 +42,9 @@ const state = reactive({
 
 ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-flow: column wrap;
   align-items: center;
-  padding: 0;
   width: 65%;
 }
 
@@ -50,6 +56,7 @@ li {
   width: 65%;
   color: #5c5470;
   list-style: none;
+  padding: 1rem;
 }
 
 a {
@@ -61,5 +68,9 @@ a {
 
 a:hover {
   border-color: #5c5470;
+}
+
+.nav:hover {
+  border-color: #f9d5a3;
 }
 </style>

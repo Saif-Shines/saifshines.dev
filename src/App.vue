@@ -17,10 +17,8 @@ export default {
     <div class="intro">
       <router-view />
     </div>
-    <div class="tools">
-      <router-link to="/">Home</router-link>
-      <br />
-      <router-link to="/explain">Explain</router-link>
+    <div class="social">
+      <SocialLinks />
     </div>
   </div>
 </template>
@@ -41,14 +39,8 @@ div .main {
   place-self: center;
 }
 
-.tools {
-  grid-column: 4 / 5;
-  grid-row: 1 / 3;
-  place-self: center;
-}
-
 .socialLinks {
   grid-column: 3 / 5;
-  grid-row: 1 / 3;
+  grid-row: 2 / 3;
 }
 </style>

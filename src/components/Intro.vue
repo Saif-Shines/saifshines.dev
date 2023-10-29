@@ -22,13 +22,10 @@ export default { components: { SocialLinks } };
       create products that meet and exceed user expectations, ultimately making
       their lives easier.
     </p>
-    <SocialLinks />
   </div>
 </template>
 
 <style>
-
-
 h1 {
   font-family: "BadScript";
   font-size: 5rem;

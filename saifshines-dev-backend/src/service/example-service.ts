@@ -1,4 +1,4 @@
-import { secureDatabase, SquidService } from '@squidcloud/backend';
+import { secureDatabase, SquidService } from "@squidcloud/backend";
 
 /**
  * Here you can define different backend functions that:
@@ -16,7 +16,7 @@ import { secureDatabase, SquidService } from '@squidcloud/backend';
  */
 export class ExampleService extends SquidService {
   // TODO: !!!IMPORTANT!!! - Replace this function with your own granular security rules
-  @secureDatabase('all', 'built_in_db')
+  @secureDatabase("all", "built_in_db")
   allowAllAccessToBuiltInDb(): boolean {
     return true;
   }

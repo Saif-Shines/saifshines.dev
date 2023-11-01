@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@squidcloud/client": "^1.0.129",
+    "concurrently": "^8.2.2",
     "prismjs": "^1.29.0",
     "vue": "^3.3.4",
     "vue-prism-editor": "alpha",

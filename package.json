@@ -4,11 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "dev": "bunx --bun vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start:frontend": "npm run dev",
+    "start:backend": "cd saifshines-dev-backend && bun run start-squid"
   },
   "dependencies": {
+    "@squidcloud/client": "^1.0.129",
+    "concurrently": "^8.2.2",
     "prismjs": "^1.29.0",
     "vue": "^3.3.4",
     "vue-prism-editor": "alpha",

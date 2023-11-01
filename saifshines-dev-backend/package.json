@@ -14,11 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "rxjs": "7.5.7",
-    "@squidcloud/common": "latest",
-    "@squidcloud/client": "latest",
     "@squidcloud/backend": "latest",
-    "reflect-metadata": "^0.1.13"
+    "@squidcloud/client": "^1.0.129",
+    "@squidcloud/common": "latest",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "7.5.7"
   },
   "devDependencies": {
     "@squidcloud/local-backend": "latest",

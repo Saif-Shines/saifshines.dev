@@ -31,6 +31,9 @@ const state = reactive({
     <li>
       <router-link class="nav" to="/explain">Explain</router-link>
     </li>
+    <li>
+      <router-link class="nav" to="/db-social">Social Links DB</router-link>
+    </li>
   </ul>
 </template>
 

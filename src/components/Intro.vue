@@ -1,12 +1,18 @@
-<script>
-import SocialLinks from "./SocialLinks.vue";
+<script setup>
+import { onMounted, ref } from "vue";
+import { portfolioCollection, squid } from "../utils/squid";
 
-export default { components: { SocialLinks } };
+const name = ref(null);
+
+onMounted(async () => {
+  let data = await portfolioCollection.doc("name").snapshot();
+  name.value = data.name;
+});
 </script>
 
 <template>
   <div>
-    <h1>Saif Ali Shaik</h1>
+    <h1>{{ name }}</h1>
     <p>
       Working closely with developers as end users for years, I have developed a
       clear understanding of their needs and possess the ability to collaborate

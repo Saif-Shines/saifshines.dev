@@ -23,7 +23,9 @@ const state = reactive({
 <template>
   <ul>
     <li v-for="link in state.links" :key="link.label">
-      <a :href="link.url">{{ link.label }}</a>
+      <a :href="link.url" target="_blank" rel="noopener noreferrer">{{
+        link.label
+      }}</a>
     </li>
     <li>
       <router-link class="nav" to="/">Home</router-link>

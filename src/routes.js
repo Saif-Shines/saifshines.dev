@@ -7,5 +7,5 @@ export const routes = [
   { path: "/", component: Intro },
   { path: "/social", component: SocialLinksVue },
   { path: "/explain", component: Explainer },
-  { path: "/db-social", component: SocialLinksDB },
+  { path: "/db", component: SocialLinksDB },
 ];

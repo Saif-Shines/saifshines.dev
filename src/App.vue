@@ -2,7 +2,6 @@
 import Intro from "./components/Intro.vue";
 import SocialLinks from "./components/SocialLinks.vue";
 import Explainer from "./components/Explainer.vue";
-import SocialLinksDB from "./components/db.vue";
 
 export default {
   components: {

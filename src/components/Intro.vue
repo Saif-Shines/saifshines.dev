@@ -6,6 +6,7 @@ const name = ref(null);
 
 onMounted(async () => {
   let data = await portfolioCollection.doc("name").snapshot();
+  console.log("getting data...", data);
   name.value = data.name;
 });
 </script>

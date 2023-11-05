@@ -1,72 +1,63 @@
 <script setup>
-import { portfolioCollection } from "./../utils/squid";
 import { reactive } from "vue";
-import { profile, thoughts, work, pushInPath } from "../utils/db";
-
-let nameDoc = portfolioCollection.doc("name");
+import {
+  profile,
+  thoughts,
+  work,
+  pushInPath,
+  updateLocalStorageAndRead,
+} from "../utils/db";
 
 const form = reactive({
   name: "",
   description: "",
-  socialProfiles: [],
-  thoughts: [],
-  works: [],
+  cacheDoc: JSON.parse(localStorage.getItem("cacheResponse")),
 });
 
-async function insert() {
-  var currentDocumentData = await nameDoc.snapshot();
-  console.info("currentDocumentData", currentDocumentData.socialProfiles);
-  if (form.name && form.description) {
-    await nameDoc.update({ name: form.name, description: form.description });
-  }
-  try {
-    if (profile.platform && profile.url) {
-      let temp = currentDocumentData.socialProfiles;
-      temp.push(profile);
-      await nameDoc.update({ socialProfiles: temp });
-    }
-    currentDocumentData = await nameDoc.snapshot();
-    console.info("[AFTER]", currentDocumentData);
-  } catch (error) {
-    console.error("Data insertion unsuccessful", error);
-  }
-}
+const dbProps = {
+  docRefName: "name",
+  collectionName: "portfolio",
+};
 
 async function save(docProp) {
   switch (String(docProp)) {
     case "name":
       pushInPath({
-        docRefName: "name",
         docProp: "name",
         valueToPush: form.name,
+        ...dbProps,
       });
       console.info("saving name");
       break;
     case "desc":
-      console.info("saving description");
+      pushInPath({
+        docProp: "name",
+        valueToPush: form.description,
+        ...dbProps,
+      });
       break;
     case "socialProfiles":
       console.info("saving social profiles...");
       pushInPath({
-        docRefName: "name",
         docProp: "socialProfiles",
         valueToPush: profile,
+        ...dbProps,
       });
       break;
     case "thoughts":
       console.info("saving thoughts");
       pushInPath({
-        docRefName: "name",
         docProp: "thoughts",
         valueToPush: thoughts,
+        ...dbProps,
       });
       break;
     case "works":
       console.info("saving works");
       pushInPath({
-        docRefName: "name",
         docProp: "works",
         valueToPush: work,
+        ...dbProps,
       });
       break;
     default:
@@ -117,7 +108,11 @@ async function save(docProp) {
           <button @click="save('works')">Save</button>
         </fieldset>
 
-        <button @click="insert">2. Save to Squid DB</button>
+        <button
+          @click="updateLocalStorageAndRead({ refresh: true, ...dbProps })"
+        >
+          Try Web Storage
+        </button>
       </form>
     </div>
     <div class="playground">
@@ -126,9 +121,7 @@ async function save(docProp) {
         <pre>
 {{ JSON.stringify(form, null, 2) }}
 <hr />
-{{ JSON.stringify(profile, null, 2) }}
-{{ JSON.stringify(thoughts, null, 2) }}
-{{ JSON.stringify(work, null, 2) }}
+{{ JSON.stringify(form.cacheDoc, '//', 4) }}
       </pre>
       </code>
     </div>

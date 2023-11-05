@@ -8,3 +8,5 @@ export const squid = new Squid({
 });
 
 export const portfolioCollection = squid.collection("portfolio");
+
+export const selectCollection = squid.collection;

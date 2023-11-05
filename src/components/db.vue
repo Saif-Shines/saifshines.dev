@@ -55,9 +55,19 @@ async function save(docProp) {
       break;
     case "thoughts":
       console.info("saving thoughts");
+      pushInPath({
+        docRefName: "name",
+        docProp: "thoughts",
+        valueToPush: thoughts,
+      });
       break;
     case "works":
       console.info("saving works");
+      pushInPath({
+        docRefName: "name",
+        docProp: "works",
+        valueToPush: work,
+      });
       break;
     default:
       console.error(`Please give ${docProp} properly in the fields`);

@@ -31,11 +31,13 @@ div .main {
   grid-column: 2 / 4;
   grid-row: 1 / 3;
   place-self: center;
+  overflow: auto;
 }
 
 .social {
   grid-column: 3 / 5;
   grid-row: 2 / 3;
+  overflow: auto;
 }
 
 .google-signin {

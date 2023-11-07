@@ -121,7 +121,7 @@ async function save(docProp) {
         <pre>
 {{ JSON.stringify(form, null, 2) }}
 <hr />
-{{ JSON.stringify(form.cacheDoc, '//', 4) }}
+{{ JSON.stringify(form.cacheDoc, null, 4) }}
       </pre>
       </code>
     </div>

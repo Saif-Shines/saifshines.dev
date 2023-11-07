@@ -1,11 +1,15 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { portfolioCollection, squid } from "../utils/squid";
+import { updateLocalStorageAndRead } from "../utils/db";
 
 const name = ref(null);
 
 onMounted(async () => {
-  let data = await portfolioCollection.doc("name").snapshot();
+  let data = await updateLocalStorageAndRead({
+    docRefName: "name",
+    collectionName: "portfolio",
+  });
   console.log("getting data...", data);
   name.value = data.name;
 });

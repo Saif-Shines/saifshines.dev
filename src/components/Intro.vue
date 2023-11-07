@@ -1,6 +1,5 @@
 <script setup>
 import { onMounted, ref } from "vue";
-import { portfolioCollection, squid } from "../utils/squid";
 import { updateLocalStorageAndRead } from "../utils/db";
 
 const name = ref(null);

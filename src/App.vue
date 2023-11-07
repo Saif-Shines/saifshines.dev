@@ -1,24 +1,18 @@
-<script>
-import Intro from "./components/Intro.vue";
+<script setup>
 import SocialLinks from "./components/SocialLinks.vue";
-import Explainer from "./components/Explainer.vue";
-
-export default {
-  components: {
-    Intro,
-    SocialLinks,
-    Explainer,
-  },
-};
+import GoogleSignIn from "./components/googleSignIn.vue";
 </script>
 
 <template>
   <div class="main">
     <div class="intro">
       <router-view />
+      <GoogleSignIn />
     </div>
     <div class="social">
       <SocialLinks />
+    </div>
+    <div class="google-signin">
     </div>
   </div>
 </template>
@@ -39,8 +33,13 @@ div .main {
   place-self: center;
 }
 
-.socialLinks {
+.social {
   grid-column: 3 / 5;
   grid-row: 2 / 3;
+}
+
+.google-signin {
+  grid-column: 4 / 5;
+  grid-row: 0 / 1;
 }
 </style>

@@ -17,7 +17,8 @@
     "prismjs": "^1.29.0",
     "vue": "^3.3.4",
     "vue-prism-editor": "alpha",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue3-google-login": "^2.0.25"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

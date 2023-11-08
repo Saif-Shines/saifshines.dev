@@ -1,5 +1,8 @@
 <script setup>
 import { reactive } from "vue";
+import GoogleSignIn from "./googleSignIn.vue";
+import Playground from "./control-panel/playground.vue";
+
 import {
   profile,
   thoughts,
@@ -68,6 +71,7 @@ async function save(docProp) {
 
 <template>
   <h1>Control Panel</h1>
+  <GoogleSignIn />
   <div class="secret">
     <div class="form">
       <form @submit.prevent="submitForm">
@@ -114,16 +118,7 @@ async function save(docProp) {
           Try Web Storage
         </button>
       </form>
-    </div>
-    <div class="playground">
-      <h3>Playground</h3>
-      <code>
-        <pre>
-{{ JSON.stringify(form, null, 2) }}
-<hr />
-{{ JSON.stringify(form.cacheDoc, null, 4) }}
-      </pre>
-      </code>
+      <Playground />
     </div>
   </div>
 </template>

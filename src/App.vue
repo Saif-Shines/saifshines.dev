@@ -10,8 +10,6 @@ import SocialLinks from "./components/SocialLinks.vue";
     <div class="social">
       <SocialLinks />
     </div>
-    <div class="google-signin">
-    </div>
   </div>
 </template>
 

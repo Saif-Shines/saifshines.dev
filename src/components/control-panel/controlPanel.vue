@@ -1,5 +1,4 @@
 <script setup>
-import GoogleSignIn from "../googleSignIn.vue";
 import { jwtDecode } from "jwt-decode";
 import { useRouter } from "vue-router";
 
@@ -16,7 +15,7 @@ const authByGoogle = (response) => {
 
 <template>
   <h1>Control Panel</h1>
-  <GoogleSignIn :callback="authByGoogle" />
+  <GoogleLogin :callback="authByGoogle" />
 </template>
 
 <style></style>

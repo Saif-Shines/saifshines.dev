@@ -1,6 +1,5 @@
 <script setup>
 import { reactive } from "vue";
-import GoogleSignIn from "./googleSignIn.vue";
 import Playground from "./control-panel/playground.vue";
 
 import {
@@ -71,7 +70,6 @@ async function save(docProp) {
 
 <template>
   <h1>Control Panel</h1>
-  <GoogleSignIn />
   <div class="secret">
     <div class="form">
       <form @submit.prevent="submitForm">

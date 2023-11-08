@@ -1,13 +1,11 @@
 <script setup>
 import SocialLinks from "./components/SocialLinks.vue";
-import GoogleSignIn from "./components/googleSignIn.vue";
 </script>
 
 <template>
   <div class="main">
     <div class="intro">
       <router-view />
-      <GoogleSignIn />
     </div>
     <div class="social">
       <SocialLinks />

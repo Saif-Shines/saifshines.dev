@@ -1,5 +1,6 @@
 <script setup>
 import { reactive } from "vue";
+import { onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
 import Playground from "./control-panel/playground.vue";
 
 import {

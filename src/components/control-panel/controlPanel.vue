@@ -8,6 +8,8 @@ const authByGoogle = (response) => {
   const decodedToken = jwtDecode(response.credential);
   console.log("Decoded token", decodedToken);
   if (decodedToken.email == "saifshine7@gmail.com") {
+    sessionStorage.setItem("token", JSON.stringify(decodedToken));
+    sessionStorage.setItem("isAuth", true);
     router.push("/db");
   }
 };

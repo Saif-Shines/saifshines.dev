@@ -16,7 +16,7 @@ onMounted(async () => {
 
 <template>
   <div>
-    <h1>{{ name }}</h1>
+    <h1>Saif Ali Shaik</h1>
     <p>
       Working closely with developers as end users for years, I have developed a
       clear understanding of their needs and possess the ability to collaborate

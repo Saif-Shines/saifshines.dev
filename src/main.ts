@@ -17,5 +17,15 @@ const router = createRouter({
   routes,
 });
 
+router.beforeEach(async (to, from) => {
+  if (to.name == "Db") {
+    if (Boolean(sessionStorage.getItem("isAuth"))) {
+      return true;
+    } else {
+      return { name: "ControlPanel" };
+    }
+  }
+});
+
 app.use(router);
 app.mount("#app");

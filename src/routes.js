@@ -5,9 +5,14 @@ import SocialLinksDB from "./components/db.vue";
 import controlPanel from "./components/control-panel/controlPanel.vue";
 
 export const routes = [
-  { path: "/", component: Intro },
-  { path: "/social", component: SocialLinksVue },
-  { path: "/explain", component: Explainer },
-  { path: "/db", component: SocialLinksDB },
-  { path: "/control-panel", component: controlPanel },
+  { path: "/", component: Intro, name: "Home" },
+  { path: "/social", component: SocialLinksVue, name: "Social" },
+  { path: "/explain", component: Explainer, name: "Explain" },
+  {
+    path: "/db",
+    component: SocialLinksDB,
+    meta: { requiresAuth: true },
+    name: "Db",
+  },
+  { path: "/control-panel", component: controlPanel, name: "ControlPanel" },
 ];

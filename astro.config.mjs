@@ -7,12 +7,12 @@ import { ion } from 'starlight-ion-theme';
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Saif' notes",
+      title: 'Saif Shines',
       social: [
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/saifshines',
+          href: 'https://github.com/Saif-Shines',
         },
       ],
       sidebar: [

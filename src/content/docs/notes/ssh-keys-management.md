@@ -5,19 +5,6 @@ sidebar:
   label: SSH Keys Management
 ---
 
-## Table of Contents
-
-- [The Problem](#the-problem)
-- [The Solution](#the-solution)
-- [Step 1: Configure SSH for Multiple Accounts](#step-1-configure-ssh-for-multiple-accounts)
-- [Step 2: Set Up Git Author Information](#step-2-set-up-git-author-information)
-- [Step 3: Clone Repositories with Your New Setup](#step-3-clone-repositories-with-your-new-setup)
-- [Alternative: Per-Project SSH Configuration](#alternative-per-project-ssh-configuration)
-- [Verify Everything Works](#verify-everything-works)
-- [Common Issues and Solutions](#common-issues-and-solutions)
-
-## The Problem
-
 **You use multiple GitHub accounts.** You have personal projects and work projects. When you commit code, you want the correct account to show as the author on GitHub.
 
 **Your current workflow is painful.** You constantly run commands like:

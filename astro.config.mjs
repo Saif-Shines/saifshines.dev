@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { ion } from 'starlight-ion-theme';
+import d2 from 'astro-d2';
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,6 +28,14 @@ export default defineConfig({
         },
       ],
       plugins: [ion()],
+    }),
+    d2({
+      theme: {
+        default: '0',
+        dark: '1', // choose at https://d2lang.com/tour/themes/
+      },
+      sketch: true,
+      layout: 'elk',
     }),
   ],
 });

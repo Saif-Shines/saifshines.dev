@@ -5,4 +5,4 @@ sidebar:
   label: Locksmith CLI
 ---
 
-Work in Progress
+We help you add auth to AI applications with ease.

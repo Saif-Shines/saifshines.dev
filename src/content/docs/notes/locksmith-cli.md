@@ -14,27 +14,13 @@ sidebar:
 
 Locksmith is a powerful CLI tool that helps developers quickly integrate enterprise-grade authentication into their AI applications. It supports modern auth providers, generates secure configurations, and integrates with popular LLM tools for seamless development.
 
-## ✨ Features
+## Blazing Fast
 
-- 🚀 **Quick Setup** - Interactive wizard for authentication provider setup
-- 🔧 **Multiple Providers** - ScaleKit, Auth0, FusionAuth support
-- 🤖 **LLM Integration** - Generate code with Claude, Gemini, or Cursor Agent
-- 📦 **Auth Modules** - Full-stack auth, SSO, and MCP (Model Context Protocol)
-- 🔒 **Secure Storage** - Encrypted credential management
-- 🎯 **Developer Friendly** - Interactive and programmatic modes
-
-## 📋 Table of Contents
-
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Commands](#-commands)
-- [Authentication Providers](#-authentication-providers)
-- [LLM Brokers](#-llm-brokers)
-- [Configuration](#-configuration)
-- [Examples](#-examples)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [License](#-license)
+```sh
+# should have node latest table
+# should have either of claude or cursor-agent or gemini
+npx locksmith generate
+```
 
 ## 🚀 Installation
 

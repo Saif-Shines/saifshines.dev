@@ -98,3 +98,20 @@ Saif Ali Shaik, Hacksmith
 
 ### Problem and Who cares
 
+Developers who want to integrate new modules to their exisiting projects in their first hour of discovery, and start building on top of it.
+
+- Managers who care about velocity
+- Founders who care about time to market
+- Developers who care about faster time to complete solution
+
+### Insight & Why now
+
+AI running on browser vs. AI tools on Code Editors
+
+Both of them do not have direct access shell. Access to shell is crucial for development workflows.
+
+**Why now?**
+
+Now, ability to make decisions has come to shell via tools like Claude Code. This tool chain into shell can be super powerful. Shell can spawn processes to Browser, Code Editors and within Shell to run processes and yet giving control to the developer via command line interface.
+
+I belive more and more tools, will come into picture chaining into these workflows. This opens up a whole new world of possibilities in underdeterministic workflows.

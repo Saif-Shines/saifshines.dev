@@ -1,13 +1,14 @@
 ---
-title: Locksmith CLI - Add Authentication to AI Applications
-description: Complete user guide for Locksmith CLI - seamlessly add enterprise-grade authentication to your AI applications
+title: Locksmith CLI
+description: A developer first CLI for incorporating auth infrastructure to your AI applications
 sidebar:
   label: Locksmith CLI
 ---
 
-# 🔐 Locksmith CLI
+A developer first CLI for incorporating auth infrastructure to your AI applications
 
-> Seamlessly add authentication infrastructure to AI applications
+### What is Locksmith?
+
 
 [![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/Saif-Shines/locksmith)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
